@@ -571,6 +571,7 @@ const init = (el)=>{
     new (0, _viewJsDefault.default)({
         el: el,
         data: m.data,
+        EventBus: (0, _eventBusDefault.default),
         html: `
 			<div>
 				<div class="output">
@@ -7491,6 +7492,9 @@ var _modelJs = require("./base/Model.js");
 var _modelJsDefault = parcelHelpers.interopDefault(_modelJs);
 var _viewJs = require("./base/View.js");
 var _viewJsDefault = parcelHelpers.interopDefault(_viewJs);
+var _eventBus = require("./base/EventBus");
+var _eventBusDefault = parcelHelpers.interopDefault(_eventBus);
+const eventBus = new (0, _eventBusDefault.default)();
 const localKey = "app2.index";
 const m = new (0, _modelJsDefault.default)({
     data: {
@@ -7510,15 +7514,15 @@ const init = (el)=>{
         html: (index)=>{
             return `
 			<div>
-				<ol class="tab-bar">
-					<li class="${index === 0 ? "selected" : ""}" data-index="0"><span>1111</span></li>
-					<li class="${index === 1 ? "selected" : ""}" data-index="1"><span>2222</span></li>
-				</ol>
-				<ol class="tab-content">
-					<li class="${index === 0 ? "active" : ""}">内容1</li>
-					<li class="${index === 1 ? "active" : ""}">内容2</li>
-				</ol>
-			</div>
+      	<ol class="tab-bar">
+        	<li class="${index === 0 ? "selected" : ""}" data-index="0"><span>1111</span></li>
+        	<li class="${index === 1 ? "selected" : ""}" data-index="1"><span>2222</span></li>
+      	</ol>
+      	<ol class="tab-content">
+        	<li class="${index === 0 ? "active" : ""}">内容1</li>
+        	<li class="${index === 1 ? "active" : ""}">内容2</li>
+      	</ol>
+    	</div>
 		`;
         },
         render (data) {
@@ -7539,7 +7543,7 @@ const init = (el)=>{
 };
 exports.default = init;
 
-},{"jquery":"hgMhh","./app2.css":"8RnuD","@parcel/transformer-js/src/esmodule-helpers.js":"2GR3c","./base/Model.js":"hO9cm","./base/View.js":"heZL3"}],"8RnuD":[function() {},{}],"264pe":[function(require,module,exports) {
+},{"jquery":"hgMhh","./app2.css":"8RnuD","@parcel/transformer-js/src/esmodule-helpers.js":"2GR3c","./base/Model.js":"hO9cm","./base/View.js":"heZL3","./base/EventBus":"g3Ns6"}],"8RnuD":[function() {},{}],"264pe":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jquery = require("jquery");
 var _jqueryDefault = parcelHelpers.interopDefault(_jquery);

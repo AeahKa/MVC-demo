@@ -20,6 +20,7 @@ const init = (el) => {
 	new View({
 		el: el,
 		data: m.data,
+		EventBus: EventBus,
 		html: `
 			<div>
 				<div class="output">
